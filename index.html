@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Management</title>
+</head>
+<!-- CSS Link -->
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <!-- TITLE -->
+  <h1>Result Card Generator</h1>
+
+  <!-- STUDENT SECTION START HERE -->
+  <div class="container">
+    <form id="studentForm">
+      <label for="stdName">Student Name:</label>
+      <input type="text" id="stdName" placeholder="Enter Student Name" required>
+
+      <label for="fName">Father Name:</label>
+      <input type="text" id="fName" placeholder="Enter Father Name" required>
+
+      <label for="rollno">Roll Number:</label>
+      <input type="text" id="rollno" placeholder="Enter Roll Number" required>
+
+      <label for="class">Class:</label>
+      <input type="text" id="class" placeholder="Enter Class (e.g., 10th Grade)" required>
+
+      <label for="dob">Date Of Birth:</label>
+      <input type="date" id="dob" required>
+
+      <div class="button">
+        <button class="genBtn" type="submit">Generate Result</button>
+      </div>
+    </form>
+  </div>
+<!-- STUDENT SECTION END HERE -->
+
+<!-- CERTIFICATE SECTION START HERE -->
+  <div class="certificate" id="certificate" style="display: none;">
+    <div class="student-info">
+      <div>
+        <h3><b>Name:</b><span id="outName"></span></h3>
+        <h3><b>Roll Number:</b><span id="outRoll"></span></h3>
+        <h3><b>Class:</b><span id="outClass"></span></h3>
+      </div>
+      <div>
+        <h3><b>Father Name:</b><span id="outFName"></span></h3>
+        <h3><b>Date of Birth:</b><span id="outDob"></span></h3>
+      </div>
+    </div>
+    <!-- CERTIFICATE SECTION END HERE -->
+
+    <!-- SUBJECT FORM SECTION START HERE -->
+    <form id="subjectForm">
+      <label for="subName">Subject Name:</label>
+      <input type="text" id="subName" placeholder="Enter Subject Name" required>
+
+      <label for="shName">Short Name:</label>
+      <input type="text" id="shName" placeholder="e.g, Eng" required>
+
+      <label for="maxMark">Maximum Marks:</label>
+      <input type="number" id="maxMark" placeholder="e.g, 150" required>
+
+      <label for="obtMark">Marks Obtained:</label>
+      <input type="number" id="obtMark" placeholder="e.g, 120" required>
+
+      <div class="button">
+        <button type="submit" class="genBtn">Add Subject</button>
+      </div>
+    </form>
+    <!-- SUBJECT FORM SECTION END HERE -->
+
+
+    <!-- TABLE SECTION START HERE -->
+
+    <table id="resultTable">
+      <thead>
+        <tr>
+          <th>Sr. #</th>
+          <th>Subject Name</th>
+          <th>Short Name</th>
+          <th>Maximum Marks</th>
+          <th>Marks Obtained</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Add Rows From JavaScript -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total</td>
+          <td id="totalMax">0</td>
+          <td id="totalObt">0</td>
+          <td id="finalGrade">-</td>
+        </tr>
+      </tfoot>
+    </table>
+    <!-- TABLE SECTION END HERE -->
+     
+  </div>
+
+
+
+</body>
+<!-- JQuery CDN Link -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- Script Link -->
+<script src="script.js"></script>
+
+</html>
