@@ -31,7 +31,7 @@ To run this project locally:
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/result-card-management.git
+   git clone https://github.com/areebch-dev/Result-Card-Management.git
 2. Open index.html in your preferred browser
   ```bash
         start index.html
